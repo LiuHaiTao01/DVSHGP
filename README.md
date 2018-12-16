@@ -3,7 +3,7 @@ Large-scale Heteroscedastic Regression via Gaussian Process
 
 This is the implementation of the scalable heteroscedastic GP (HGP) developed in "*[Haitao Liu,  Yew-Soon Ong, and Jianfei Cai, Large-scale Heteroscedastic Regression via Gaussian Process](https://arxiv.org/abs/1811.01179).*" Please see the paper for further details.
 
-We here focus on the heteroscedastic Gaussian process regression $$y = f + \mathcal{N}(0, \exp(g))$$ which integrates the latent function and the noise together in a unified non-parametric Bayesian framework. Though showing flexible and powerful performance, HGP suffers from the cubic time complexity, which strictly limits its application to big data. 
+We here focus on the heteroscedastic Gaussian process regression $y = f + \mathcal{N}(0, \exp(g))$ which integrates the latent function and the noise together in a unified non-parametric Bayesian framework. Though showing flexible and powerful performance, HGP suffers from the cubic time complexity, which strictly limits its application to big data. 
 
 To improve the scalability of HGP, we first develop a variational sparse inference algorithm, named VSHGP, to handle large-scale datasets. This is performed by introducing $m$ latent variables $\mathbf{f}_m$ for $\mathbf{f}$, and $u$ latent variables $\mathbf{g}_u$ for $\mathbf{g}$. Furthermore, to enhance the model capability of capturing quick-varying features, we follow the Bayesian committee machine (BCM) formalism to distribute the learning over $M$ local VSHGP experts $\{\mathcal{M}_i\}_{i=1}^M$ with many inducing points, and aggregate their predictive distributions. At the same time, the distributed mode scales DVSHGP up to arbitrary data size!
 
