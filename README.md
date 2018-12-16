@@ -7,7 +7,7 @@ We here focus on the heteroscedastic Gaussian process regression $y = f + \mathc
 
 To improve the scalability of HGP, we first develop a variational sparse inference algorithm, named VSHGP, to handle large-scale datasets. This is performed by introducing $m$ latent variables $\mathbf{f}_m$ for $\mathbf{f}$, and $u$ latent variables $\mathbf{g}_u$ for $\mathbf{g}$. Furthermore, to enhance the model capability of capturing quick-varying features, we follow the Bayesian committee machine (BCM) formalism to distribute the learning over $M$ local VSHGP experts $\{\mathcal{M}_i\}_{i=1}^M$ with many inducing points, and aggregate their predictive distributions. At the same time, the distributed mode scales DVSHGP up to arbitrary data size!
 
-![A toy example to illustrate DVSHGP](https://github.com/LiuHaiTao01/DVSHGP/tree/master/figs/toy.png)
+![A toy example to illustrate DVSHGP](https://github.com/LiuHaiTao01/DVSHGP/raw/master/figs/toy.png)
 
 This figure shows a toy example of distributed VSHGP (DVSHGP). Here, we partition the whole 500 training data into five subsets, yielding five VSHGP experts (marked with different colors) with their own inducing points for the latent function $f$ (top circles) and the noise latent function $g​$ (bottom squares). The results turn out that 
 
